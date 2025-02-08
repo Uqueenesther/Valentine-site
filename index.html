@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chidera, Be My Valentine?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body { background-color: #ffe6f2; font-family: 'Pacifico', cursive; text-align: center; }
+        .heart { color: red; font-size: 3rem; animation: float 2s infinite ease-in-out; }
+        @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen flex-col">
+    <h1 class="text-4xl text-pink-600 mb-6">Hey Chidera ❤️</h1>
+    <p class="text-xl text-gray-700 max-w-md">You make every day brighter, and I can't imagine Valentine's Day without you. Will you be my Valentine? 💖</p>
+    <div class="mt-8">
+        <button id="yesBtn" class="px-6 py-3 bg-red-500 text-white text-lg font-bold rounded-full shadow-lg hover:bg-red-600 transition">Yes! 😍</button>
+        <button id="noBtn" class="px-6 py-3 bg-gray-300 text-black text-lg font-bold rounded-full shadow-lg hover:bg-gray-400 transition ml-4">Still thinking... 🤔</button>
+        <button id="sadNoBtn" class="px-6 py-3 bg-black text-white text-lg font-bold rounded-full shadow-lg hover:bg-gray-700 transition ml-4">No 😢</button>
+    </div>
+    <div id="response" class="hidden mt-6 text-2xl text-red-500 font-bold"></div>
+    <script>
+        document.getElementById("yesBtn").addEventListener("click", function() {
+            document.getElementById("response").innerText = "Yay! You just made my heart so happy! 💃🎉";
+            document.getElementById("response").classList.remove("hidden");
+            gsap.from("#response", { opacity: 0, scale: 0.5, duration: 0.5, ease: "bounce.out" });
+        });
+        document.getElementById("noBtn").addEventListener("click", function() {
+            document.getElementById("response").innerText = "Aww, take your time. But I hope it's a YES soon! 😘";
+            document.getElementById("response").classList.remove("hidden");
+            gsap.from("#response", { opacity: 0, y: -20, duration: 0.5 });
+        });
+        document.getElementById("sadNoBtn").addEventListener("click", function() {
+            document.getElementById("response").innerText = "Ooh, that's sad because I am not Jay 😞";
+            document.getElementById("response").classList.remove("hidden");
+            gsap.from("#response", { opacity: 0, y: -20, duration: 0.5 });
+        });
+    </script>
+</body>
+</html>
