@@ -13,25 +13,27 @@
         @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen flex-col text-white">
+<body class="flex items-center justify-center min-h-screen flex-col text-white p-4">
     
     <div id="step1" class="text-center">
         <h1 class="text-4xl text-purple-300 mb-6">Hey Chidera ❤️</h1>
-        <button id="nextBtn1" class="px-6 py-3 bg-purple-600 text-white text-lg font-bold rounded-full shadow-lg hover:bg-purple-700 transition">Next</button>
+        <button id="nextBtn1" class="w-full max-w-xs px-6 py-3 bg-purple-600 text-white text-lg font-bold rounded-full shadow-lg hover:bg-purple-700 transition">Next</button>
     </div>
     
     <div id="step2" class="hidden text-center">
         <p class="text-xl text-white max-w-md">You make every day brighter, and I can't imagine Valentine's Day without you.</p>
-        <button id="nextBtn2" class="mt-6 px-6 py-3 bg-pink-500 text-white text-lg font-bold rounded-full shadow-lg hover:bg-pink-600 transition">Next</button>
+        <button id="nextBtn2" class="w-full max-w-xs mt-6 px-6 py-3 bg-pink-500 text-white text-lg font-bold rounded-full shadow-lg hover:bg-pink-600 transition">Next</button>
     </div>
     
     <div id="step3" class="hidden text-center">
         <p class="text-xl text-white max-w-md">Will you be my Valentine? 💖</p>
-        <div class="mt-8">
-            <button id="yesBtn" class="px-6 py-3 bg-purple-500 text-white text-lg font-bold rounded-full shadow-lg hover:bg-purple-700 transition">Yes! 😍</button>
-            <button id="noBtn" class="px-6 py-3 bg-yellow-300 text-black text-lg font-bold rounded-full shadow-lg hover:bg-yellow-400 transition ml-4">Still thinking... 🤔</button>
-            <button id="sadNoBtn" class="px-6 py-3 bg-gray-800 text-white text-lg font-bold rounded-full shadow-lg hover:bg-gray-600 transition ml-4">No 😢</button>
+        <div class="mt-8 w-full max-w-2xl flex flex-col md:flex-row md:justify-center md:space-x-6 space-y-4 md:space-y-0">
+            <button id="yesBtn" class="w-full px-12 py-5 md:w-auto md:px-10 md:py-4 text-base bg-purple-500 text-white font-bold rounded-full shadow-lg hover:bg-purple-700 transition">Yes! 😍</button>
+            <button id="noBtn" class="w-full px-12 py-5 md:w-auto md:px-10 md:py-4 text-base bg-yellow-300 text-black font-bold rounded-full shadow-lg hover:bg-yellow-400 transition">Still thinking... 🤔</button>
+            <button id="sadNoBtn" class="w-full px-12 py-5 md:w-auto md:px-10 md:py-4 text-base bg-gray-800 text-white font-bold rounded-full shadow-lg hover:bg-gray-600 transition">No 😢</button>
         </div>
+        
+        
     </div>
     
     <div id="response" class="hidden mt-6 text-2xl text-purple-300 font-bold"></div>
